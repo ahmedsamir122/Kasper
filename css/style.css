@@ -24,7 +24,6 @@ header{
     align-items: center;
     position: relative;
     padding-bottom: 1.3em;
-    /* border: 1px solid red; */
 }
 header .links {
     margin-right: -4em;
@@ -37,7 +36,6 @@ header a {
     position: relative;
     padding-bottom: 2.5em;
     transition: 0.4s ease;
-    /* border: 1px solid red; */
 }
 header a:hover {
     color:rgb(25, 200, 250) ;
@@ -64,6 +62,16 @@ header::after {
     height: 1px;
     width: 100%;
     bottom: 0;
+}
+header .menu {
+    display: none;
+}
+header span {
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin-bottom: 2px;
 }
 header .icon {
     color: white;
@@ -119,7 +127,7 @@ header .icon {
     left: 50%;
     transform: translateX(-50%);
     bottom: 15%;
-    width: 12%;
+    width: 18%;
     height: 2px;
     background-color:  rgba(168,168,168,255);
 }
@@ -250,7 +258,7 @@ header .icon {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 .services .card-gallery {
@@ -309,7 +317,7 @@ header .icon {
     padding: 0.5em 2em;
 }
 .services .gallery-video {
-    width: 90%;
+    width: 100%;
     background-image: url(img/design-features.jpg);
     margin: auto;
     margin-top: 4em;
@@ -369,7 +377,7 @@ header .icon {
 .services .about-numbers {
     background-image: url(img/background3.jpg);
     background-position: center;
-    width: 95%;
+    width: 100%;
     margin-top: 0;
     padding-top: 3em;
     padding-bottom: 3em;
@@ -637,13 +645,12 @@ header .icon {
 /* ------ john testimonial ----- */
 .about-pic {
     margin-top: 3em;
-    width: 90%;
+    width: 100%;
     background-image: url(img/background3.jpg);
     padding-top: 3em;
     padding-bottom: 3em;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -789,7 +796,7 @@ header .icon {
 .input {
     margin-top: 4em;
     background-image: url(img/background3.jpg);
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -802,9 +809,7 @@ header .icon {
 }
 .input form {
     flex-basis: 50%;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
+    border: 1px solid white;
     display: flex;
     justify-content: space-between;
 }
@@ -921,7 +926,7 @@ header .icon {
     margin-bottom: 0.6em;
 }
 footer {
-    width: 90%;
+    width: 100%;
     background-image: url(img/background3.jpg);
     display: flex;
     justify-content: center;
@@ -970,4 +975,79 @@ footer span {
     font-size: 15px;
     font-weight: 600;
     color: rgba(0,199,252,255);
+}
+
+@media(max-width:767px){
+    header {
+        width: 90%;
+    }
+    header .menu {
+        display: block;
+    }
+    header .links {
+        padding-top: 6em;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 10em;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: rgb(87, 95, 95);
+        z-index: 3;
+        height: 100vh;
+    }
+    .main .text {
+        width: 100%;
+    }
+    .design .layer {
+        width: 100%;
+    }
+    .services >h3::after {
+        width: 20%;
+    }
+    .services .setting {
+        flex-direction: column;
+    }
+    .main .links{
+        /* display: none; */
+    } 
+    .services .about-numbers .layer {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .design img {display: none;}
+    .gallery {
+        flex-direction: column;
+    }
+    .test {
+        flex-direction: column;
+    }
+    .list {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .input {
+        flex-direction: column;
+    }
+    .input {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .input p {
+        width: 100%;
+        text-align: center;
+        padding-top: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+    .contact-info {
+        flex-direction: column;
+    }
+    .contact-info .button {
+        margin-bottom: 1.5em;
+    }
+    .contact-right p {
+        text-align: center;}
+
 }
