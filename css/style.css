@@ -26,7 +26,7 @@ header{
     padding-bottom: 1.3em;
 }
 header .links {
-    margin-right: -4em;
+    margin-right: 0em;
 }
 header a {
     text-decoration: none;
@@ -977,12 +977,17 @@ footer span {
     color: rgba(0,199,252,255);
 }
 
-@media(max-width:767px){
+@media(max-width:819px){
     header {
         width: 90%;
     }
     header .menu {
         display: block;
+        position: relative;
+        padding-right: 0;
+        margin-right: 0;
+        z-index: 5;
+        cursor: pointer;
     }
     header .links {
         padding-top: 6em;
@@ -1010,13 +1015,26 @@ footer span {
         flex-direction: column;
     }
     .main .links{
-        /* display: none; */
+        display: none;
+        right: -15em;
+        transition: 0.4s ease;
     } 
+    .main .active{
+        flex-direction: column;
+        display: block;
+        right: -1em;
+    } 
+    header a {
+        margin-right: 0;
+        display: block;
+    }
     .services .about-numbers .layer {
         flex-direction: column;
         gap: 2em;
     }
-    .design img {display: none;}
+    .design img {
+        display: none;
+    }
     .gallery {
         flex-direction: column;
     }
