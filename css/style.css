@@ -25,8 +25,9 @@ header{
     position: relative;
     padding-bottom: 1.3em;
 }
-header .links {
+header .links{
     margin-right: 0em;
+    transition: 0.4s ease;
 }
 header a {
     text-decoration: none;
@@ -35,7 +36,6 @@ header a {
     color: white;
     position: relative;
     padding-bottom: 2.5em;
-    transition: 0.4s ease;
 }
 header a:hover {
     color:rgb(25, 200, 250) ;
@@ -996,11 +996,13 @@ footer span {
         text-align: center;
         width: 10em;
         position: absolute;
-        right: 0;
+        /* right: 0; */
         top: 0;
         background-color: rgb(87, 95, 95);
         z-index: 3;
         height: 100vh;
+        transition: 0.4s ease;
+        position: fixed;
     }
     .main .text {
         width: 100%;
@@ -1015,14 +1017,14 @@ footer span {
         flex-direction: column;
     }
     .main .links{
-        display: none;
         right: -15em;
         transition: 0.4s ease;
     } 
     .main .active{
         flex-direction: column;
         display: block;
-        right: -1em;
+        right: 0;
+        transition: 0.4s ease;
     } 
     header a {
         margin-right: 0;

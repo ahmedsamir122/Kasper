@@ -4,6 +4,6 @@ let active = document.querySelector('.links');
 menu.addEventListener('click',()=>{
     active.classList.toggle('active');
 })
-document.querySelectorAll('a').forEach(n=>n.addEventListener('click',()=>{
+document.querySelectorAll('.links a').forEach(n=>n.addEventListener('click',()=>{
     active.classList.remove('active');
 }))
